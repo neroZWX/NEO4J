@@ -1626,3 +1626,319 @@ RETURN 'propertyKeys' as a, propertyKeys as result
 2017-04-22 00:53:54.342+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [36]:  Check pointing completed
 2017-04-22 00:53:54.346+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
 2017-04-22 00:53:54.351+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-04-22 12:15:59.017+0000 INFO  [o.n.c.i.ExecutionEngine] Discarded stale query from the query cache: EXPLAIN create(major{name:'softeware development in computing year3'})
+create(groupA{grouptype:'A'})
+create(groupB{grouptype:'B'})
+create(groupC{grouptype:'C'})
+
+create(lecture{coursetype:'lecture'})
+create(DM{coursename:'Database mgmt'})
+create(MA{coursename:'Mobile Apps'})
+create(GT{coursename:'Graph Theory'})
+create(PP{coursename:'professional practice'})
+create(SSR{coursename:'Srever side rad'})
+create(ST{coursename:'software Testing'})
+
+create(DMT{lecturetime:'mon10-11'})
+create(DMT1{lecturetime:'wed16-17'})
+create(MAT{lecturetime:'mon12-14'})
+create(GTT{lecturetime:'wed10-11'})
+create(GTT1{lecturetime:'fri11-12'})
+create(PPT{lecturetime:'wed11-12'})
+create(SSRT{lecturetime:'wed13-14'})
+create(STT{lecturetime:'wed15-16'})
+
+create(DMRN{lectureroomnumber:'0994'})
+create(DMRN1{lectureroomnumber:'0995'})
+create(MARN{lectureroomnumber:'0223'})
+create(GTRN{lectureroomnumber:'0938'})
+create(GTRN1{lectureroomnumber:'0208'})
+create(PPRN{lectureroomnumber:'0208'})
+create(SSRRN{lectureroomnumber:'0997'})
+create(STRN{lectureroomnumber:'0939'})
+
+create(DMTN{TeacherName:'Deirdre ODonovan'})
+create(MATN{TeacherName:'Damien Costello'})
+create(GTTN{TeacherName:'Ian'})
+create(PPTN{TeacherName:'Damien Costello'})
+create(SSRTN{TeacherName:'Gerard Harrison'})
+create(STTN{TeacherName:'Martin Hynes'})
+
+create(LNGT{LabName:'Graph Theory'})
+create(LNDM{LabName:'Database Mgmt'})
+create(LNMA{LabName:'Mobile Apps'})
+create(LNST{LabName:'Softe Testing'})
+create(LNSSR{LabName:'Server Sides Rad'})
+
+create(LTGTAR{LabTimeGropuARoom:'Mon 9:00-10:00 0145'})
+create(LTDMAR{LabTimeGropuARoom:'Mon 9:00-11:00 0481 CR4'})
+create(LTMAAR{LabTimeGropuARoom:'Tue 11:00-13:00 0470'})
+create(LTSTAR{LabTimeGropuARoom:'Mon 16:00-18:00 0481 CR4'})
+create(LTSSRAR{LabTimeGropuARoom:'Thu 14:00-16:00 0436 CR5'})
+
+create(LTGTBR{LabTimeGropuBRoom:'Tue 12:00-13:00 0379'})
+create(LTDMBR{LabTimeGropuBRoom:'Fri 9:00-11:00 0482 CR3'})
+create(LTMABR{LabTimeGropuBRoom:'Thu 9:00-11:00 PF18'})
+create(LTSTBR{LabTimeGropuBRoom:'Tue 14:00-16:00 0436 CR5'})
+create(LTSSRBR{LabTimeGropuBRoom:'Tue 16:00-18:00 0436 CR5'})
+
+create(LTGTCR{LabTimeGropuCRoom:'Wed 9:00-10:00 0162'})
+create(LTDMCR{LabTimeGropuCRoom:'Thu 15:00-17:00 0483 CR2'})
+create(LTMACR{LabTimeGropuCRoom:'Thu 11:00-13:00 PF18'})
+create(LTSTCR{LabTimeGropuCRoom:'Tue 9:00-11:00 0436 CR5'})
+create(LTSSRCR{LabTimeGropuCRoom:'Mon 16:00-18:00 0436 CR5'})
+
+
+
+
+
+CREATE
+(major)-[:re]->(groupA),
+(major)-[:re]->(groupB),
+(major)-[:re]->(groupC),
+(groupA)-[:coursetype]->(lecture),
+(groupB)-[:coursetype]->(lecture),
+(groupC)-[:coursetype]->(lecture),
+
+(lecture)-[:Lecturename]->(DM),
+(lecture)-[:Lecturename]->(MA),
+(lecture)-[:Lecturename]->(GT),
+(lecture)-[:Lecturename]->(PP),
+(lecture)-[:Lecturename]->(SSR),
+(lecture)-[:Lecturename]->(ST),
+
+(DM)-[:LecturTime]->(DMT),
+(DM)-[:LecturTime]->(DMT1),
+(MA)-[:LecturTime]->(MAT),
+(GT)-[:LecturTime]->(GTT),
+(GT)-[:LecturTime]->(GTT1),
+(PP)-[:LecturTime]->(PPT),
+(SSR)-[:LecturTime]->(SSRT),
+(ST)-[:LecturTime]->(STT),
+
+(DM)-[:LecturRoomNumber]->(DMRN),
+(DM)-[:LecturRoomNumber]->(DMRN1),
+(MA)-[:LecturRoomNumber]->(MARN),
+(GT)-[:LecturRoomNumber]->(GTRN),
+(GT)-[:LecturRoomNumber]->(GTRN1),
+(PP)-[:LecturRoomNumber]->(PPRN),
+(SSR)-[:LecturRoomNumber]->(SSRRN),
+(ST)-[:LecturRoomNumber]->(STRN),
+
+(DM)-[:TeacherName]->(DMTN),
+(MA)-[:TeacherName]->(MATN),
+(GT)-[:TeacherName]->(GTTN),
+(PP)-[:TeacherName]->(PPTN),
+(SSR)-[:TeacherName]->(SSRTN),
+(ST)-[:TeacherName]->(STTN),
+
+(groupA)-[:LabType]->(LNGT),
+(groupA)-[:LabType]->(LNDM),
+(groupA)-[:LabType]->(LNMA),
+(groupA)-[:LabType]->(LNST),
+(groupA)-[:LabType]->(LNSSR),
+
+(LNGT)-[:LabTeacher]->(GTTN),
+(LNDM)-[:LabTeacher]->(DMTN),
+(LNMA)-[:LabTeacher]->(MATN),
+(LNST)-[:LabTeacher]->(STTN),
+(LNSSR)-[:LabTeacher]->(SSRTN),
+
+(LNGT)-[:LabTimeRoom]->(LTGTAR),
+(LNDM)-[:LabTimeRoom]->(LTDMAR),
+(LNMA)-[:LabTimeRoom]->(LTMAAR),
+(LNST)-[:LabTimeRoom]->(LTSTAR),
+(LNSSR)-[:LabTimeRoom]->(LTSSRAR),
+
+(groupB)-[:LabType]->(LNGT),
+(groupB)-[:LabType]->(LNDM),
+(groupB)-[:LabType]->(LNMA),
+(groupB)-[:LabType]->(LNST),
+(groupB)-[:LabType]->(LNSSR),
+
+(LNGT)-[:LabTimeRoom]->(LTGTBR),
+(LNDM)-[:LabTimeRoom]->(LTDMBR),
+(LNMA)-[:LabTimeRoom]->(LTMABR),
+(LNST)-[:LabTimeRoom]->(LTSTBR),
+(LNSSR)-[:LabTimeRoom]->(LTSSRBR),
+
+(groupC)-[:LabType]->(LNGT),
+(groupC)-[:LabType]->(LNDM),
+(groupC)-[:LabType]->(LNMA),
+(groupC)-[:LabType]->(LNST),
+(groupC)-[:LabType]->(LNSSR),
+
+(LNGT)-[:LabTimeRoom]->(LTGTCR),
+(LNDM)-[:LabTimeRoom]->(LTDMCR),
+(LNMA)-[:LabTimeRoom]->(LTMACR),
+(LNST)-[:LabTimeRoom]->(LTSTCR),
+(LNSSR)-[:LabTimeRoom]->(LTSSRCR);
+
+2017-04-22 12:15:59.027+0000 INFO  [o.n.c.i.CypherCompiler] Discarded stale query from the query cache: create(major{name:'softeware development in computing year3'})
+create(groupA{grouptype:'A'})
+create(groupB{grouptype:'B'})
+create(groupC{grouptype:'C'})
+
+create(lecture{coursetype:'lecture'})
+create(DM{coursename:'Database mgmt'})
+create(MA{coursename:'Mobile Apps'})
+create(GT{coursename:'Graph Theory'})
+create(PP{coursename:'professional practice'})
+create(SSR{coursename:'Srever side rad'})
+create(ST{coursename:'software Testing'})
+
+create(DMT{lecturetime:'mon10-11'})
+create(DMT1{lecturetime:'wed16-17'})
+create(MAT{lecturetime:'mon12-14'})
+create(GTT{lecturetime:'wed10-11'})
+create(GTT1{lecturetime:'fri11-12'})
+create(PPT{lecturetime:'wed11-12'})
+create(SSRT{lecturetime:'wed13-14'})
+create(STT{lecturetime:'wed15-16'})
+
+create(DMRN{lectureroomnumber:'0994'})
+create(DMRN1{lectureroomnumber:'0995'})
+create(MARN{lectureroomnumber:'0223'})
+create(GTRN{lectureroomnumber:'0938'})
+create(GTRN1{lectureroomnumber:'0208'})
+create(PPRN{lectureroomnumber:'0208'})
+create(SSRRN{lectureroomnumber:'0997'})
+create(STRN{lectureroomnumber:'0939'})
+
+create(DMTN{TeacherName:'Deirdre ODonovan'})
+create(MATN{TeacherName:'Damien Costello'})
+create(GTTN{TeacherName:'Ian'})
+create(PPTN{TeacherName:'Damien Costello'})
+create(SSRTN{TeacherName:'Gerard Harrison'})
+create(STTN{TeacherName:'Martin Hynes'})
+
+create(LNGT{LabName:'Graph Theory'})
+create(LNDM{LabName:'Database Mgmt'})
+create(LNMA{LabName:'Mobile Apps'})
+create(LNST{LabName:'Softe Testing'})
+create(LNSSR{LabName:'Server Sides Rad'})
+
+create(LTGTAR{LabTimeGropuARoom:'Mon 9:00-10:00 0145'})
+create(LTDMAR{LabTimeGropuARoom:'Mon 9:00-11:00 0481 CR4'})
+create(LTMAAR{LabTimeGropuARoom:'Tue 11:00-13:00 0470'})
+create(LTSTAR{LabTimeGropuARoom:'Mon 16:00-18:00 0481 CR4'})
+create(LTSSRAR{LabTimeGropuARoom:'Thu 14:00-16:00 0436 CR5'})
+
+create(LTGTBR{LabTimeGropuBRoom:'Tue 12:00-13:00 0379'})
+create(LTDMBR{LabTimeGropuBRoom:'Fri 9:00-11:00 0482 CR3'})
+create(LTMABR{LabTimeGropuBRoom:'Thu 9:00-11:00 PF18'})
+create(LTSTBR{LabTimeGropuBRoom:'Tue 14:00-16:00 0436 CR5'})
+create(LTSSRBR{LabTimeGropuBRoom:'Tue 16:00-18:00 0436 CR5'})
+
+create(LTGTCR{LabTimeGropuCRoom:'Wed 9:00-10:00 0162'})
+create(LTDMCR{LabTimeGropuCRoom:'Thu 15:00-17:00 0483 CR2'})
+create(LTMACR{LabTimeGropuCRoom:'Thu 11:00-13:00 PF18'})
+create(LTSTCR{LabTimeGropuCRoom:'Tue 9:00-11:00 0436 CR5'})
+create(LTSSRCR{LabTimeGropuCRoom:'Mon 16:00-18:00 0436 CR5'})
+
+
+
+
+
+CREATE
+(major)-[:re]->(groupA),
+(major)-[:re]->(groupB),
+(major)-[:re]->(groupC),
+(groupA)-[:coursetype]->(lecture),
+(groupB)-[:coursetype]->(lecture),
+(groupC)-[:coursetype]->(lecture),
+
+(lecture)-[:Lecturename]->(DM),
+(lecture)-[:Lecturename]->(MA),
+(lecture)-[:Lecturename]->(GT),
+(lecture)-[:Lecturename]->(PP),
+(lecture)-[:Lecturename]->(SSR),
+(lecture)-[:Lecturename]->(ST),
+
+(DM)-[:LecturTime]->(DMT),
+(DM)-[:LecturTime]->(DMT1),
+(MA)-[:LecturTime]->(MAT),
+(GT)-[:LecturTime]->(GTT),
+(GT)-[:LecturTime]->(GTT1),
+(PP)-[:LecturTime]->(PPT),
+(SSR)-[:LecturTime]->(SSRT),
+(ST)-[:LecturTime]->(STT),
+
+(DM)-[:LecturRoomNumber]->(DMRN),
+(DM)-[:LecturRoomNumber]->(DMRN1),
+(MA)-[:LecturRoomNumber]->(MARN),
+(GT)-[:LecturRoomNumber]->(GTRN),
+(GT)-[:LecturRoomNumber]->(GTRN1),
+(PP)-[:LecturRoomNumber]->(PPRN),
+(SSR)-[:LecturRoomNumber]->(SSRRN),
+(ST)-[:LecturRoomNumber]->(STRN),
+
+(DM)-[:TeacherName]->(DMTN),
+(MA)-[:TeacherName]->(MATN),
+(GT)-[:TeacherName]->(GTTN),
+(PP)-[:TeacherName]->(PPTN),
+(SSR)-[:TeacherName]->(SSRTN),
+(ST)-[:TeacherName]->(STTN),
+
+(groupA)-[:LabType]->(LNGT),
+(groupA)-[:LabType]->(LNDM),
+(groupA)-[:LabType]->(LNMA),
+(groupA)-[:LabType]->(LNST),
+(groupA)-[:LabType]->(LNSSR),
+
+(LNGT)-[:LabTeacher]->(GTTN),
+(LNDM)-[:LabTeacher]->(DMTN),
+(LNMA)-[:LabTeacher]->(MATN),
+(LNST)-[:LabTeacher]->(STTN),
+(LNSSR)-[:LabTeacher]->(SSRTN),
+
+(LNGT)-[:LabTimeRoom]->(LTGTAR),
+(LNDM)-[:LabTimeRoom]->(LTDMAR),
+(LNMA)-[:LabTimeRoom]->(LTMAAR),
+(LNST)-[:LabTimeRoom]->(LTSTAR),
+(LNSSR)-[:LabTimeRoom]->(LTSSRAR),
+
+(groupB)-[:LabType]->(LNGT),
+(groupB)-[:LabType]->(LNDM),
+(groupB)-[:LabType]->(LNMA),
+(groupB)-[:LabType]->(LNST),
+(groupB)-[:LabType]->(LNSSR),
+
+(LNGT)-[:LabTimeRoom]->(LTGTBR),
+(LNDM)-[:LabTimeRoom]->(LTDMBR),
+(LNMA)-[:LabTimeRoom]->(LTMABR),
+(LNST)-[:LabTimeRoom]->(LTSTBR),
+(LNSSR)-[:LabTimeRoom]->(LTSSRBR),
+
+(groupC)-[:LabType]->(LNGT),
+(groupC)-[:LabType]->(LNDM),
+(groupC)-[:LabType]->(LNMA),
+(groupC)-[:LabType]->(LNST),
+(groupC)-[:LabType]->(LNSSR),
+
+(LNGT)-[:LabTimeRoom]->(LTGTCR),
+(LNDM)-[:LabTimeRoom]->(LTDMCR),
+(LNMA)-[:LabTimeRoom]->(LTMACR),
+(LNST)-[:LabTimeRoom]->(LTSTCR),
+(LNSSR)-[:LabTimeRoom]->(LTSSRCR);
+
+2017-04-22 12:18:07.291+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [37]:  Starting check pointing...
+2017-04-22 12:18:07.302+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [37]:  Starting store flush...
+2017-04-22 12:18:07.312+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 37 to [C:\Users\Taoistzhang\Documents\Neo4j\default.graphdb\neostore.counts.db.b], from [C:\Users\Taoistzhang\Documents\Neo4j\default.graphdb\neostore.counts.db.a].
+2017-04-22 12:18:07.336+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 37 to [C:\Users\Taoistzhang\Documents\Neo4j\default.graphdb\neostore.counts.db.b], from [C:\Users\Taoistzhang\Documents\Neo4j\default.graphdb\neostore.counts.db.a].
+2017-04-22 12:18:07.395+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [37]:  Store flush completed
+2017-04-22 12:18:07.399+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [37]:  Starting appending check point entry into the tx log...
+2017-04-22 12:18:07.406+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [37]:  Appending check point entry into the tx log completed
+2017-04-22 12:18:07.411+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [37]:  Check pointing completed
+2017-04-22 12:18:07.416+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-04-22 12:18:07.420+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
+2017-04-22 12:23:07.438+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Starting check pointing...
+2017-04-22 12:23:07.443+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Starting store flush...
+2017-04-22 12:23:07.514+0000 INFO  [o.n.k.i.s.c.CountsTracker] About to rotate counts store at transaction 48 to [C:\Users\Taoistzhang\Documents\Neo4j\default.graphdb\neostore.counts.db.a], from [C:\Users\Taoistzhang\Documents\Neo4j\default.graphdb\neostore.counts.db.b].
+2017-04-22 12:23:07.524+0000 INFO  [o.n.k.i.s.c.CountsTracker] Successfully rotated counts store at transaction 48 to [C:\Users\Taoistzhang\Documents\Neo4j\default.graphdb\neostore.counts.db.a], from [C:\Users\Taoistzhang\Documents\Neo4j\default.graphdb\neostore.counts.db.b].
+2017-04-22 12:23:07.557+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Store flush completed
+2017-04-22 12:23:07.561+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Starting appending check point entry into the tx log...
+2017-04-22 12:23:07.567+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Appending check point entry into the tx log completed
+2017-04-22 12:23:07.571+0000 INFO  [o.n.k.i.t.l.c.CheckPointerImpl] Check Pointing triggered by scheduler for time threshold [48]:  Check pointing completed
+2017-04-22 12:23:07.574+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Starting log pruning.
+2017-04-22 12:23:07.579+0000 INFO  [o.n.k.i.t.l.p.LogPruningImpl] Log Rotation [0]:  Log pruning complete.
